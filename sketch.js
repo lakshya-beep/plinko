@@ -1,11 +1,15 @@
+
 const Engine = Matter.Engine;
 const World= Matter.World;
 const Bodies = Matter.Bodies;
 
+var engine,world;
 
 function setup() {
-  createCanvas(600,800);
+  createCanvas(700,900);
 
+
+/*
   createSprite(100, 100, 40, 40);
   createSprite(200, 100, 40, 40);
   createSprite(300, 100, 40, 40);
@@ -29,9 +33,14 @@ function setup() {
   createSprite(300, 400, 40, 40);
   createSprite(400, 400, 40, 40);
   createSprite(500, 400, 40, 40);
+*/
+  engine = Engine.create();
+  world = engine.world;
 }
 
 function draw() {
   background("black");  
+Engine.update(engine);
+
   drawSprites();
 }
